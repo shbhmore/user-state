@@ -1,1 +1,16 @@
-<p>user works!</p>
+<div>
+    <form>
+        <h3>Add User:</h3> 
+        <hr>
+        <label for="userId">User Id:</label>
+        <input type="number" name="userId" value={userId} disabled>
+        <label for="userName">User Name:</label>
+        <input>
+        <label for="stateId">State Id:</label>
+        <select>
+            <option>--Select State--</option>
+            <option  *ngFor="let state of states">{{state}}</option>
+        </select>
+        <input type="submit">
+    </form>
+</div>

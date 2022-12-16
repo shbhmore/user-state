@@ -1,0 +1,13 @@
+.routes{
+    position:relative;
+    display: inline-flex;
+    flex-direction: row;
+    align-content: space-between;
+    margin: 10px;
+    text-decoration: none;
+    list-style: none;
+}
+li{
+    margin: 2px;
+    align-content: space-between;
+}

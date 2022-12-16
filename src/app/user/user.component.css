@@ -1,0 +1,9 @@
+form{
+    position:relative;
+    display: inline-flex;
+    flex-direction: column;
+}
+label{
+    margin-top: 0%;
+    position: relative;
+}

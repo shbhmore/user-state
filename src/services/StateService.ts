@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class StateService{
-    private allStatesUrl = 'https://localhost:8080/states';
+    private allStatesUrl = 'http://localhost:8080/states';
 
     constructor(private httpClient:HttpClient) { }
     getStates(){

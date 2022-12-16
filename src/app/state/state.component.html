@@ -1,11 +1,11 @@
 <div>
-    <form>
+    <form >
         <h3>Add State: </h3>
         <hr>
         <label for="stateId">State Id:</label>
-        <input name="stateId" type="number" (ngModel)="stateId">
+        <input name="stateId" type="number" [(ngModel)]="stateId">
         <label for="stateName">State Name:</label>
-        <input name="stateName" type="text" (ngModel)="stateName">
+        <input name="stateName" type="text" [(ngModel)]="stateName">
         <input type="submit" (click)="setValue()">
     </form>
 </div>

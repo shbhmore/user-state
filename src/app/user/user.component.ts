@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { StateService } from 'src/services/StateService';
+import { UserService } from 'src/services/UserService';
 
 @Component({
   selector: 'app-user',
@@ -7,16 +8,17 @@ import { StateService } from 'src/services/StateService';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent {
+  stateId:number=0;
+  stateName:string='';
   states:any=null;
   userId:number=0;
   userName:string='';
-  user:any={
-    userId:this.userId,
-    userName:this.userName,
-    state:this.states
-  }
+  state:any={
+    stateId:this.stateId,
+    stateName:this.stateName
+  };
   
-  constructor(private stateService:StateService){ }
+  constructor(private stateService:StateService, private userService:UserService){ }
 
   ngOnInit(){
     this.stateService.getStates()
@@ -25,7 +27,13 @@ export class UserComponent {
 
 
   saveUser(){
-
+    const user={
+      userId:this.userId,
+      userName:this.userName,
+      state:this.state
+    }
+    this.userService.addUser(user)
+    .subscribe(data=>{data});
   }
 
 }

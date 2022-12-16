@@ -10,19 +10,17 @@ export class StateComponent {
   stateId:number=0;
   stateName:string='';
 
-  state:any={
-    stateId: this.stateId,
-    stateName: this.stateName
-  };
+  
 
   constructor(private stateService:StateService){}
 
   setValue(){
-    this.state={
+    const state={
       stateId: this.stateId,
       stateName: this.stateName
     };
-    this.stateService.addState(this.state)
-    .subscribe((data)=>{data});
+    console.log(state)
+    this.stateService.addState(state)
+    .subscribe(data=>{console.log(data)});
   }
 }

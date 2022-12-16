@@ -3,14 +3,14 @@
         <h3>Add User:</h3> 
         <hr>
         <label for="userId">User Id:</label>
-        <input type="number" name="userId" value={userId} disabled>
+        <input type="number" name="userId" [(ngModel)]="userId">
         <label for="userName">User Name:</label>
-        <input>
+        <input type="text" name="userName" [(ngModel)]="userName">
         <label for="stateId">State Id:</label>
-        <select>
+        <select [(ngModel)]="state" [ngModelOptions]="{standalone:true}">
             <option disabled selected>--Select State--</option>
-            <option  *ngFor="let state of states">{{state.stateName}}-{{state.stateId}}</option>
+            <option  *ngFor="let state of states" >{{state.stateId}},{{state.stateName}}</option>
         </select>
-        <input type="submit">
+        <input type="submit" (click)="saveUser()">
     </form>
 </div>

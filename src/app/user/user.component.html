@@ -8,8 +8,8 @@
         <input>
         <label for="stateId">State Id:</label>
         <select>
-            <option>--Select State--</option>
-            <option  *ngFor="let state of states">{{state}}</option>
+            <option disabled selected>--Select State--</option>
+            <option  *ngFor="let state of states">{{state.stateName}}-{{state.stateId}}</option>
         </select>
         <input type="submit">
     </form>

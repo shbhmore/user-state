@@ -9,8 +9,13 @@
         <label for="stateId">State Id:</label>
         <select [(ngModel)]="state" [ngModelOptions]="{standalone:true}">
             <option disabled selected>--Select State--</option>
-            <option  *ngFor="let state of states" >{{state.stateId}},{{state.stateName}}</option>
+            <option  *ngFor="let stat of states" [ngValue]="stat">{{stat.stateName}}</option>
         </select>
         <input type="submit" (click)="saveUser()">
+        <input type="submit" (click)="showUsers()" value="Display">
+        <p>
+            <li *ngFor="let user of users">{{user.userId}}:{{user.userName}}:{{user.state.stateName}}</li>
+        </p>
     </form>
+
 </div>

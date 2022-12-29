@@ -9,5 +9,13 @@
 }
 li{
     margin: 2px;
+    padding: 5px;
     align-content: space-between;
+    box-shadow: 1px 1px 2px #f25;
+}
+li:hover{
+    margin: 2px;
+    padding: 5px;
+    align-content: space-between;
+    background-color: #f25;
 }

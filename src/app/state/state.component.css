@@ -1,0 +1,27 @@
+form{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0% 30%;
+    border:none;
+    border-radius: 10px;
+    padding:10px;
+    box-shadow: 9px 10px 15px #f25;
+}
+
+label, input, select{
+    padding: 10px;
+    border-radius: 5px;
+    border:none;
+    box-shadow: 1px 1px 2px #f25;
+    margin:1%;
+}
+
+input[type="submit"]{
+    background-color: gray;
+    box-shadow: 1px 1px 2px #f25;
+}
+input[type="submit"]:hover{
+    background-color: #f25;
+}
+

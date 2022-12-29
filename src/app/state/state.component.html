@@ -2,10 +2,8 @@
     <form >
         <h3>Add State: </h3>
         <hr>
-        <label for="stateId">State Id:</label>
-        <input name="stateId" type="number" [(ngModel)]="stateId">
-        <label for="stateName">State Name:</label>
-        <input name="stateName" type="text" [(ngModel)]="stateName">
+        <input name="stateId" type="number" [(ngModel)]="stateId" placeholder="stateId">
+        <input name="stateName" type="text" [(ngModel)]="stateName" placeholder="stateName">
         <input type="submit" (click)="setValue()">
         <input type="submit" (click)="updateValue()" value="update">
     </form>
